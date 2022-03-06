@@ -28,8 +28,8 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: "ASIAXHVW7AOS6HWUIYDM"
-        aws-secret-access-key: "Cp8vMPh/waPpggEIq+5SleFyR2oPySHCMrph1Uly"
+        aws-access-key-id: "AKIAXHVW7AOSUEDV277W"
+        aws-secret-access-key: "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"
         aws-region: eu-west-2
     - name: Lint with flake8
       run: |
