@@ -30,7 +30,7 @@ jobs:
       with:
         aws-access-key-id: "AKIAXHVW7AOSUEDV277W"
         aws-secret-access-key: "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"
-        aws-region: eu-west-2
+        aws-region: us-east-1
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
     - name: Pull data from DVC
