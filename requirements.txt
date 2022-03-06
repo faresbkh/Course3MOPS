@@ -1,0 +1,7 @@
+numpy
+pandas
+pandas-profiling
+scikit-learn
+pytest
+flake8
+xgboost

@@ -1,8 +1,5 @@
 # Script to train machine learning model.
 
-from cProfile import label
-from operator import mod
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
