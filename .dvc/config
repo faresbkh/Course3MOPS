@@ -1,0 +1,7 @@
+[cache]
+    dir = /home/fares/Desktop/dvccache
+    s3 = s3cache
+['remote "s3cache"']
+    url = ../s3/buckets/course3mlops/cache
+['remote "myremote"']
+    url = s3://course3mlops
