@@ -33,7 +33,7 @@ jobs:
         aws-region: us-east-1
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
-    - name: Pull data from DVC
+    - name: Pull data from cleaned_data.csv
       run: dvc pull data -R
     - name: Lint with flake8
       run: |
