@@ -25,6 +25,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ASIAXHVW7AOS6HWUIYDM
+        aws-secret-access-key: Cp8vMPh/waPpggEIq+5SleFyR2oPySHCMrph1Uly
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -34,3 +39,4 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    
