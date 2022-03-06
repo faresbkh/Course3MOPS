@@ -30,6 +30,7 @@ jobs:
       with:
         aws-access-key-id: ASIAXHVW7AOS6HWUIYDM
         aws-secret-access-key: Cp8vMPh/waPpggEIq+5SleFyR2oPySHCMrph1Uly
+        aws-region: eu-west-2
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
