@@ -1,5 +1,5 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
-from xgboost import XGBClassifier
+from xgboost import XGBClassifier 
 
 
 # Optional: implement hyperparameter tuning.
@@ -62,3 +62,4 @@ def inference(model, X):
         Predictions from the model.
     """
     return model.predict(X)
+
