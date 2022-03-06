@@ -33,8 +33,6 @@ jobs:
         aws-region: eu-west-2
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
-      with:
-          version: '1.0.1'
     - name: Pull data from DVC
       run: dvc pull data -R
     - name: Lint with flake8
