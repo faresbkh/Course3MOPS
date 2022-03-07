@@ -7,17 +7,19 @@ from fastapi import FastAPI
 from model.ml.data import process_data
 from model.ml.model import inference
 from pydantic import BaseModel
-from xgboost import XGBClassifier
+
+#from xgboost import XGBClassifier
 
 app = FastAPI()
 
 # loading component only once
-trained_model = XGBClassifier()
-trained_model.load_model("model.json")
+
 with open("encoder.p", "rb") as pickle_file:
     encoder = pickle.load(pickle_file)
 with open("lb.p", "rb") as pickle_file:
     lb = pickle.load(pickle_file)
+with open("model.p", "rb") as pickle_file:
+    trained_model = pickle.load(pickle_file)
 cat_features = [
     "workclass",
     "education",

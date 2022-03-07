@@ -5,10 +5,10 @@ import pickle
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from xgboost import XGBClassifier
 
 from model.ml.data import process_data
 from model.ml.model import compute_model_metrics, inference, train_model
+
 
 
 def train():
@@ -35,7 +35,8 @@ def train():
 
     # Proces the test data with the process_data function.
     model = train_model(X_train, y_train)
-    model.save_model("model.json")
+    with open("model.p", "wb") as pickle_file:
+        pickle.dump(model, pickle_file)
     with open("encoder.p", "wb") as pickle_file:
         pickle.dump(encoder, pickle_file)
     with open("lb.p", "wb") as pickle_file:
@@ -67,8 +68,8 @@ def slice_score():
     """
     df = pd.read_csv("cleaned_data.csv")
     _, test = train_test_split(df, test_size=0.20)
-    trained_model = XGBClassifier()
-    trained_model.load_model("model.json")
+    with open("model.p", "rb") as pickle_file:
+        trained_model = pickle.load(pickle_file)
     with open("encoder.p", "rb") as pickle_file:
         encoder = pickle.load(pickle_file)
     with open("lb.p", "rb") as pickle_file:

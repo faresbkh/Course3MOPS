@@ -1,0 +1,4 @@
+outs:
+- md5: 72c0d610272ef11c888e47cb757c9982
+  size: 122202
+  path: model.p

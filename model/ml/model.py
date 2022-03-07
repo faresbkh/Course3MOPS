@@ -1,5 +1,7 @@
+# from xgboost import XGBClassifier
+
 from sklearn.metrics import fbeta_score, precision_score, recall_score
-from xgboost import XGBClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 
 
 # Optional: implement hyperparameter tuning.
@@ -19,7 +21,8 @@ def train_model(X_train, y_train):
         Trained machine learning model.
     """
     # fit model no training data
-    model = XGBClassifier()
+    # model = XGBClassifier()
+    model = GradientBoostingClassifier()
     model.fit(X_train, y_train)
 
     return model
@@ -62,4 +65,3 @@ def inference(model, X):
         Predictions from the model.
     """
     return model.predict(X)
-

@@ -37,20 +37,18 @@ def test_get_path_query_low():
 
 
 def test_get_path_query_high():
-
-    # We can increase capital gain to make the salary high
     data = Humain(
         age=16,
         workclass="State-gov",
         fnlwgt=77516,
-        education="Bachelors",
-        education_num=13,
-        maritalStatus="Never-married",
+        education="Doctorate",
+        education_num=16,
+        maritalStatus="Married-civ-spouse",
         occupation="Adm-clerical",
-        relationship="Not-in-family",
+        relationship="Husband",
         race="White",
         sex="Male",
-        capital_gain=1000000,
+        capital_gain=100000,
         capital_loss=0,
         hoursPerWeek=40,
         nativeCountry="United-States",
