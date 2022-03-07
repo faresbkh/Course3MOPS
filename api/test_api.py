@@ -2,7 +2,7 @@ import json
 
 from fastapi.testclient import TestClient
 
-from api.api_server import Humain, app
+from api_server import Humain, app
 
 client = TestClient(app)
 
