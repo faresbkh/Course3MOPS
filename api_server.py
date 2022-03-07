@@ -1,6 +1,3 @@
-import json
-
-# loading component only once
 import os
 import pickle
 from typing import Literal
