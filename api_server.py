@@ -1,18 +1,25 @@
 import json
+
+# loading component only once
+import os
 import pickle
 from typing import Literal
 
 import pandas as pd
 from fastapi import FastAPI
-from model.ml.data import process_data
-from model.ml.model import inference
 from pydantic import BaseModel
 
-#from xgboost import XGBClassifier
+from model.ml.data import process_data
+from model.ml.model import inference
 
+# from xgboost import XGBClassifier
+if "DYNO" in os.environ and os.path.isdir(".dvc"):
+    os.system("dvc config core.no_scm true")
+    if os.system("dvc pull") != 0:
+        exit("dvc pull failed")
+    os.system("rm -r .dvc .apt/usr/lib/dvc")
 app = FastAPI()
 
-# loading component only once
 
 with open("encoder.p", "rb") as pickle_file:
     encoder = pickle.load(pickle_file)
