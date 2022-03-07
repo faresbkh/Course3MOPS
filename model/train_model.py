@@ -10,7 +10,6 @@ from model.ml.data import process_data
 from model.ml.model import compute_model_metrics, inference, train_model
 
 
-
 def train():
     # Add the necessary imports for the starter code.
     data = pd.read_csv("cleaned_data.csv")
@@ -107,7 +106,7 @@ def slice_score():
 
             output.append(line)
 
-    with open("slice_score.txt", "w") as out:
+    with open("slice_output.txt", "w") as out:
         for line in output:
             out.write(line + "\n")
 
