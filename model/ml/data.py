@@ -48,7 +48,8 @@ def process_data(X, categorical_features=[], label=None, training=True, encoder=
         Trained LabelBinarizer if training is True, otherwise returns the binarizer
         passed in.
     """
-
+    if "index" in X.columns:
+        X = X.drop(["index"], axis=1)
     if label is not None:
         y = X[label]
         X = X.drop([label], axis=1)

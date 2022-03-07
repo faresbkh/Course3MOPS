@@ -21,7 +21,7 @@ The same source of data as training data, the evaluation takes 20% of the initia
 
 ## Metrics
 
-The model has precision of 77.98% recall of 65.88% and fbeta of 71.42%
+The model has precision of 77.82% recall of 66.37% and fbeta of 71.64%
 
 ## Ethical Considerations
 
