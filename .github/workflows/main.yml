@@ -28,8 +28,8 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: "AKIAXHVW7AOSUEDV277W"
-        aws-secret-access-key: "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"
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
